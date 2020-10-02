@@ -32,5 +32,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "firebase": "^7.22.0",
+    "react-firebase-hooks": "^2.2.0"
   }
 }
