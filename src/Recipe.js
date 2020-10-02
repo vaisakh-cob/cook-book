@@ -30,11 +30,10 @@ const useStyles = makeStyles((theme) => ({
   }));
 
   
-function Recipe() {
-    const classes = useStyles();
-
-
-  return (
+function Recipe(props) {
+    const classes = useStyles()
+    
+    return (
     <div className="Recipe">
       <Card className={classes.root}>
       <CardHeader
@@ -48,17 +47,17 @@ function Recipe() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Veg Pulao"
-        subheader="Oct 02, 2020"
+        title={props.recipe.title}
+        subheader={props.recipe.subTitle}
       />
       <CardMedia
         className={classes.media}
-        image="https://yummytummyrecipes.com/wp-content/uploads/2020/07/Veg-Pulav.png"
-        title="Veg Pulao"
+        image={props.recipe.imageUrl}
+        title={props.recipe.title}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-        Pulao is a one pot rice dish made by cooking fragrant basmati rice with aromatic spices, herbs and sometimes stock.
+        { props.recipe.description }
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
