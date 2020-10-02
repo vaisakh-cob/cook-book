@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Button from '@material-ui/core/Button';
 import './App.css';
 
 function App() {
@@ -10,14 +11,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <Button href="https://reactjs.org" target="_blank" variant="outlined" color="primary">
+            Learn React
+          </Button>
       </header>
     </div>
   );
