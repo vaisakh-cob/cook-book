@@ -9,6 +9,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
+      margin: "5%"
     },
     media: {
       height: 0,
@@ -34,7 +35,6 @@ function Recipe(props) {
     const classes = useStyles()
     
     return (
-    <div className="Recipe">
       <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -68,7 +68,6 @@ function Recipe(props) {
         </IconButton>
       </CardActions>
       </Card>
-    </div>
   );
 }
 
