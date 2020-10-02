@@ -38,8 +38,7 @@ function Recipe(props) {
       <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+          <Avatar aria-label="recipe" src={props.recipe.user}>
           </Avatar>
         }
         action={
