@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
       margin: "2.5%",
-      marginLeft: 0
+      marginLeft: 0,
+      height: "fit-content"
     },
     media: {
       height: 0,
@@ -29,6 +30,14 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
       backgroundColor: red[500],
     },
+    content: {
+      textAlign: "left",
+      maxHeight: "4rem",
+      overflow: "auto",
+      paddingTop: 0,
+      paddingBottom: "0 !important",
+      marginBottom: "1rem"
+    }
   }));
 
   
@@ -55,11 +64,6 @@ function Recipe(props) {
         image={props.recipe.imageUrl}
         title={props.recipe.title}
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-        { props.recipe.description }
-        </Typography>
-      </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
@@ -68,6 +72,11 @@ function Recipe(props) {
           <ShareIcon />
         </IconButton>
       </CardActions>
+      <CardContent className={classes.content}>
+        <Typography variant="body2" color="textSecondary" component="p">
+        {props.recipe.description}
+        </Typography>
+      </CardContent>
       </Card>
   );
 }
